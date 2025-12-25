@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cf9c84f50bed1edcc021a9d2bf3e3d2b9e55bab183271b37b5d64ed34c3133ba
-size 43
+streamlit
+pandas
+numpy
+scikit-learn
+joblib
+pydeck
+plotly
