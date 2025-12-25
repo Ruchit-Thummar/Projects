@@ -4,6 +4,7 @@ import joblib
 import pydeck as pdk
 import plotly.graph_objects as go
 import pickle
+from pathlib import Path
 
 def convert_lat_lon(value):
     value = str(value).strip()
@@ -27,8 +28,16 @@ st.caption(
 )
 
 # load model
-model = joblib.load('temperature_model.pkl')
-feature_columns = joblib.load('feature_columns.pkl')
+APP_DIR = Path(__file__).resolve().parent
+
+model_path = APP_DIR / "temperature_model.pkl"
+feature_path = APP_DIR / "feature_columns.pkl"
+
+model = joblib.load(model_path)
+features = joblib.load(feature_path)
+
+# model = joblib.load('temperature_model.pkl')
+# feature_columns = joblib.load('feature_columns.pkl')
 
 # load dataset 
 @st.cache_data
@@ -179,6 +188,7 @@ st.markdown('---')
 st.caption(
     'Climate Trend Prediction |  Built with ML & Streamlit | created by Ruchit'
 )
+
 
 
 
