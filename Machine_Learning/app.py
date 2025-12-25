@@ -28,6 +28,13 @@ st.caption(
 )
 
 # load model
+
+st.write("APP_DIR:", APP_DIR)
+st.write("Files in APP_DIR:")
+for p in APP_DIR.iterdir():
+    st.write(p.name)
+
+
 APP_DIR = Path(__file__).resolve().parent
 
 model_path = APP_DIR / "temperature_model.pkl"
@@ -188,6 +195,7 @@ st.markdown('---')
 st.caption(
     'Climate Trend Prediction |  Built with ML & Streamlit | created by Ruchit'
 )
+
 
 
 
