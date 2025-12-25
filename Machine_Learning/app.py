@@ -27,11 +27,8 @@ st.caption(
 )
 
 # load model
-with open('temperature_model.pkl', 'rb') as f:
-    model = pickle.load(f)
-
-with open('feature_columns.pkl', 'rb') as f:
-    feature_columns = pickle.load(f)
+model = joblib.load('temperature_model.pkl')
+feature_columns = joblib.load('feature_columns.pkl')
 
 # load dataset 
 @st.cache_data
@@ -182,5 +179,6 @@ st.markdown('---')
 st.caption(
     'Climate Trend Prediction |  Built with ML & Streamlit | created by Ruchit'
 )
+
 
 
