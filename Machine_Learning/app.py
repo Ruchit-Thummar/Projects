@@ -26,13 +26,8 @@ st.caption(
 )
 
 # load model
-@st.cache_resource
-def load_model():
-    model = joblib.load('temperature_model.pkl')
-    features = joblib.load('feature_columns.pkl')
-    return model, features
-
-model, feature_columns = load_model()
+model = joblib.load('temperature_model.pkl')
+feature_columns = joblib.load('feature_columns.pkl')
 
 # load dataset 
 @st.cache_data
@@ -183,3 +178,4 @@ st.markdown('---')
 st.caption(
     'Climate Trend Prediction |  Built with ML & Streamlit | created by Ruchit'
 )
+
