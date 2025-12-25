@@ -1,9 +1,10 @@
 streamlit
 pickle
-pickle
+joblib
 pandas
 numpy
 scikit-learn
 pydeck
 plotly
+
 
