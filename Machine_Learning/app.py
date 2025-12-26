@@ -26,14 +26,15 @@ st.caption(
 )
 
 # load model
-file_path = 'Machine_Learning/temperature_model.pkl'
-file_path1 = 'Machine_Learning/feature_columns.pkl'
+model_path = 'Machine_Learning/temperature_model.pkl'
+features_path = 'Machine_Learning/feature_columns.pkl'
 
-with open(file_path, 'rb') as f:
-    model = pickle.load(f,encoding='bytes')
+with open(model_path, 'rb') as f:
+    model = pickle.load(f)
 
-with open(file_path1, 'rb') as f:
-    feature_columns = pickle.load(f,encoding='bytes')
+with open(features_path, 'rb') as f:
+    feature_columns = pickle.load(f)
+
 
 # load dataset 
 @st.cache_data
@@ -184,6 +185,7 @@ st.markdown('---')
 st.caption(
     'Climate Trend Prediction |  Built with ML & Streamlit | created by Ruchit'
 )
+
 
 
 
